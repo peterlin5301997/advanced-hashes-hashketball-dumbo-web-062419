@@ -201,7 +201,7 @@ def winning_team
         data.each do |player, stats|
           stats.each do |stat, info|
             if stat == :points
-              sum_points += info
+              team1_points += info
             end
           end
         end
