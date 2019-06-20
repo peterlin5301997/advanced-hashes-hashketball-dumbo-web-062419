@@ -149,10 +149,12 @@ def big_shoe_rebounds
   max_shoe_size = 0
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
-      data.each do |player, stats|
-        stats.each do |stat, info|
-          if stat == :shoe && info > max_shoe_size
-            max_shoe_size = info
+      if attribute == :players
+        data.each do |player, stats|
+          stats.each do |stat, info|
+            if stat == :shoe && info > max_shoe_size
+              max_shoe_size = info
+            end
           end
         end
       end
