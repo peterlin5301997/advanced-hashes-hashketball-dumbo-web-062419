@@ -190,3 +190,12 @@ def most_points_scored
   end
   return most_points_player
 end
+
+def winning_team
+  most_points_team = ""
+  game_hash.each do |locaiton, team_data|
+    team_data.each do |attribute, data|
+      
+    end
+  end
+end
