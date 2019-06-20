@@ -265,9 +265,12 @@ def long_name_steals_a_ton?
           if player.size > num_of_characters
             num_of_characters = player.size
             longest_name = player
-            stats.each do
+            stats.each do |stat, info|
+              if stat == :steals
+                longest_name_steals = info
+              end
+            end
           end
-
         end
       end
     end
