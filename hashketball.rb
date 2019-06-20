@@ -197,16 +197,41 @@ def winning_team
   team1_points = 0
   team2_points = 0
   game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if attribute == :players
-        data.each do |player, stats|
-          stats.each do |stat, info|
-            if stat == :points
-              sum_points += info
+    if location == :home
+      team_data.each do |attribute, data|
+        if attribute == :team_name
+          team1_name = data
+        end
+        if attribute == :players
+          data.each do |player, stats|
+            stats.each do |stat, info|
+              if stat == :points
+                team1_points += info
+              end
+            end
+          end
+        end
+      end
+    elsif location == :away
+      team_data.each do |attribute, data|
+        if attribute == :team_name
+          team2_name = data
+        end
+        if attribute == :players
+          data.each do |player, stats|
+            stats.each do |stat, info|
+              if stat == :points
+                team2_points += info
+              end
             end
           end
         end
       end
     end
+  end
+  if team1_points > team2_points
+    return team1_name
+  else
+    return team2_name
   end
 end
