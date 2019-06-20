@@ -145,7 +145,7 @@ def player_stats(player_name)
   end
 end
 
-def big_shoe_rebounds()
+def big_shoe_rebounds
   max_shoe_size = 0
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
