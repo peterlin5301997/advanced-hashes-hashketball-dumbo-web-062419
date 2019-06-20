@@ -114,7 +114,7 @@ end
 def player_numbers(team_name)
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
-      
+
     end
   end
 end
