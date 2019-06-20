@@ -179,7 +179,7 @@ def most_points_scored
           stats.each do |stat, info|
             if stat == :points && info > most_points_scored
               most_points_scored = info
-              most_points_player = game_hash[location][:player]
+              most_points_player = game_hash[location][:player].key
             end
           end
         end
