@@ -208,4 +208,9 @@ def winning_team
       end
     end
   end
+  if team1_points > team2_points
+    return team1_points
+  else
+    return team2_points
+  end
 end
