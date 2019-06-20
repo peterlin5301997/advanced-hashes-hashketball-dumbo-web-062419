@@ -207,6 +207,17 @@ def winning_team
         end
       end
     end
+    team_data.each do |attribute, data|
+      if attribute == :players
+        data.each do |player, stats|
+          stats.each do |stat, info|
+            if stat == :points
+              team2_points += info
+            end
+          end
+        end
+      end
+    end
   end
   if team1_points > team2_points
     return team1_points
