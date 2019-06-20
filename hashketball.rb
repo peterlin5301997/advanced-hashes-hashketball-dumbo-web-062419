@@ -265,9 +265,9 @@ def long_name_steals_a_ton?
           if player.size > num_of_characters
             num_of_characters = player.size
             longest_name = player
-            stats.each do 
+            stats.each do
           end
-          
+
         end
       end
     end
