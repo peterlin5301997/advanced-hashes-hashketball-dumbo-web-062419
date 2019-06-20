@@ -238,6 +238,7 @@ end
 
 def player_with_longest_name
   longest_name = ""
+  num_of_characters = 0
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
