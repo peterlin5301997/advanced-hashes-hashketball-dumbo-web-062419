@@ -192,6 +192,7 @@ def most_points_scored
 end
 
 def winning_team
+  result = ""
   most_points_team = ""
   sum_points = 0
   game_hash.each do |locaiton, team_data|
