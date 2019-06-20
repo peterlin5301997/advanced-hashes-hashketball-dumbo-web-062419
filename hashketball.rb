@@ -159,6 +159,8 @@ def big_shoe_rebounds
           end
           stats.each do |stat, info|
             if stat == :rebounds && game_hash[player][:shoe] == max_shoe_size
+              result = info
+            end
           end
         end
       end
