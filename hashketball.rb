@@ -258,6 +258,7 @@ def long_name_steals_a_ton?
   longest_name = ""
   num_of_characters = 0
   longest_name_steals = 0
+  most_steals = 0
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
@@ -272,7 +273,17 @@ def long_name_steals_a_ton?
             end
           end
         end
+        data.each do |player, stats|
+          stats.each do |stat, info|
+            if stat == :steals && info > most_steals
+              most_steals = info
+            end
+          end
+        end
       end
     end
+  end
+  if longest_name_steals == most_steals
+    return longest_name
   end
 end
