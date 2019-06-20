@@ -213,7 +213,7 @@ def winning_team
     end
     team_data.each do |attribute, data|
       if attribute == :team_name
-        team1_name = data
+        team2_name = data
       end
       if attribute == :players
         data.each do |player, stats|
