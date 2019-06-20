@@ -197,7 +197,7 @@ def winning_team
   game_hash.each do |locaiton, team_data|
     team_data.each do |attribute, data|
       if attribute == :team_name
-        team_name = data
+        result = data
       end
       if attribute == :players
         data.each do |player, stats|
