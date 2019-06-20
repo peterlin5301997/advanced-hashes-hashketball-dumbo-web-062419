@@ -174,7 +174,6 @@ def big_shoe_rebounds
       end
     end
   end
-  return result
 end
 
 def good_practices
