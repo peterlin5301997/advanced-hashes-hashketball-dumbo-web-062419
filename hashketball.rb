@@ -198,6 +198,9 @@ def winning_team
   team2_points = 0
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
+      if attribute == :team_name
+        team1_name = data
+      end
       if attribute == :players
         data.each do |player, stats|
           stats.each do |stat, info|
@@ -209,6 +212,9 @@ def winning_team
       end
     end
     team_data.each do |attribute, data|
+      if attribute == :team_name
+        team1_name = data
+      end
       if attribute == :players
         data.each do |player, stats|
           stats.each do |stat, info|
