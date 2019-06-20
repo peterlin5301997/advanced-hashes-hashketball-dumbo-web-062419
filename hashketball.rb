@@ -161,19 +161,6 @@ def big_shoe_rebounds
       end
     end
   end
-  game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if attribute == :players
-        data.each do |player, stats|
-          stats.each do |stat, info|
-            if stat == :rebounds && game_hash[:shoe] == max_shoe_size
-              result = info
-            end
-          end
-        end
-      end
-    end
-  end
   return result
 end
 
