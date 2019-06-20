@@ -177,6 +177,7 @@ def most_points_scored
         data.each do |player, stats|
           if stats.each do |stat, info|
             if stat == :points && info > most_points_scored
+              most_points_scored = info
             end
           end
         end
